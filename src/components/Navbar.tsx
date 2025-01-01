@@ -6,12 +6,14 @@ const Navbar: React.FC = () => {
     <nav className="mx-auto bg-baseGrey p-4">
       <div className="container mx-auto flex items-center justify-between text-white">
         <div>
-          <img src={Logo} alt="Christmas Logo" className="h-12 w-96" />
+          <a href="/">
+            <img src={Logo} alt="Christmas Logo" className="h-12 w-72" />
+          </a>
         </div>
-        <ul className="flex space-x-4">
+        <ul className="flex space-x-4 text-2xl">
           <li>
-            <a href="/" className="hover:text-white">
-              Home
+            <a href="/services" className="hover:text-white">
+              Services
             </a>
           </li>
           <li>
@@ -20,17 +22,12 @@ const Navbar: React.FC = () => {
             </a>
           </li>
           <li>
-            <a href="/services" className="hover:text-white">
-              Services
-            </a>
-          </li>
-          <li>
             <a href="/contact" className="hover:text-white">
               Contact
             </a>
           </li>
         </ul>
-        <div className="space-y-1 rounded bg-slate-500">
+        <div className="space-y-1 rounded bg-slate-500 px-4 py-1">
           <p className="text-white">Free Consultations</p>
           <p className="">0121 714 3845</p>
         </div>
