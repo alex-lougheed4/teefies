@@ -20,7 +20,7 @@ module.exports = {
         xl: '1440px'
       },
       backgroundImage: {
-        hero: "url('../public/hero.png')"
+        hero: "url('/hero.png')"
       },
       colors: {
         primaryTeal: '#228C8C',

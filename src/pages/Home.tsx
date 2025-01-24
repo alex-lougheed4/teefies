@@ -1,10 +1,36 @@
+import { useEffect, useState } from 'react'
+
 import ProfilePicture from '@/assets/andrew.jpg'
 import DentureReline from '@/assets/denture-reline.jpg'
 import DentureRepair from '@/assets/denture-repair.jpg'
 import NewDenture from '@/assets/new-denture.jpg'
 import OpenTimeCard from '@/components/OpenTimeCard'
 import { ReviewCarousel } from '@/components/ReviewCarousel'
+
 export const Home = () => {
+  const [isModalVisible, setIsModalVisible] = useState(true)
+  const [isFadingOut, setIsFadingOut] = useState(false)
+
+  const closeModal = () => {
+    setIsFadingOut(true)
+    setTimeout(() => {
+      setIsModalVisible(false)
+      setIsFadingOut(false)
+    }, 300) // Duration of the fade-out animation
+  }
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        closeModal()
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
   const data = [
     {
       title: 'New Dentures',
@@ -34,7 +60,7 @@ export const Home = () => {
   ]
   return (
     <>
-      <div className="h-[90vh] w-full bg-hero bg-cover bg-center ">
+      <div id="hero" className="h-[90vh] w-full bg-hero bg-cover bg-center ">
         <div className="flex flex-row items-center justify-between">
           <h1 className="ml-52 text-5xl">Your smile is my priority</h1>
           <OpenTimeCard />
@@ -42,34 +68,50 @@ export const Home = () => {
         <div className="absolute bottom-0 w-full">
           <ReviewCarousel />
         </div>
-        <div className="fixed bottom-4 right-4 z-50">
-          <div className="bg-orange-500 relative rounded-lg p-4 shadow-lg">
-            <button
-              className="absolute right-2 top-2 text-black"
-              onClick={() => document.getElementById('popup')?.remove()}
+        <div className="fixed bottom-80 left-4 z-50">
+          {isModalVisible && (
+            <div
+              className={`relative w-1/3 rounded-lg bg-black/50 p-4 shadow-lg transition-opacity duration-300 ${
+                isFadingOut ? 'opacity-0' : 'opacity-100'
+              }`}
             >
-              &times;
-            </button>
-            <h2 className="text-xl font-semibold text-black">
-              Clinical Dental Technician
-            </h2>
-            <p className="mt-2 text-black">
-              A Clinical Dental Technician (CDT) is a highly skilled
-              professional who specializes in the design, creation, and fitting
-              of dentures and other dental appliances. They work closely with
-              patients to ensure the best fit and comfort, providing
-              personalized care and attention to detail.
-            </p>
-          </div>
+              <button
+                className="absolute right-2 top-2 text-black"
+                onClick={() => setIsModalVisible(false)}
+              >
+                &times;
+              </button>
+              <h2 className="text-2xl font-semibold text-black">
+                What is a Clinical Dental Technician?
+              </h2>
+              <p className="text-md mt-2 text-black">
+                Well, they are a registered dental care professional who can
+                provide complete dentures direct to the public. They can also
+                provide partial dentures and other dental devices on
+                prescription from a registered dentist.
+              </p>
+              <h3>What can we do? </h3>
+              <p className="text-md mt-2 text-black">
+                {' '}
+                A CDT is able to oversee the patient’s whole denture journey.
+                They can treatment plan (complete dentures), take the
+                impressions, do a bite registration and then manufacture the
+                denture from start to finish. This results in the patient
+                receiving a high-quality denture, and changes can be made
+                instantly rather than trying to communicate through
+                prescriptions where information can be missed.
+              </p>
+            </div>
+          )}
         </div>
       </div>
-      <div className="mx-auto flex h-auto items-center gap-5 p-4">
+      <div id="about" className="mx-auto flex h-auto items-center gap-5 p-4">
         <img
           src={ProfilePicture}
           alt="Owner's Profile"
           className="size-1/3 rounded-3xl"
         />
-        <div className="to-blue-500 rounded-2xl bg-gradient-to-r from-teal-400 p-5 text-center text-black shadow-lg">
+        <div className="rounded-2xl  p-5 text-center text-black shadow-lg">
           <h2 className="mb-4 text-3xl font-bold">Andrew Lougheed, CDT</h2>
           <p className="text-gray-100 mb-6 mt-2">
             Andrew is a highly skilled Clinical Dental Technician with over 20
@@ -99,7 +141,10 @@ export const Home = () => {
           </p>
         </div>
       </div>
-      <div className="mx-auto flex max-w-4xl flex-col items-center gap-5  p-4">
+      <div
+        id="services"
+        className="mx-auto flex max-w-4xl flex-col items-center gap-5  p-4"
+      >
         {data.map((item) => (
           <ProductHero
             key={item.title}
@@ -108,6 +153,29 @@ export const Home = () => {
             image={item.image}
           />
         ))}
+      </div>
+      <div id="contact"></div>
+      <div className="mx-auto max-w-4xl p-4">
+        <h2 className="mb-4 text-center text-3xl font-bold">Contact Us</h2>
+        <div className="flex flex-col items-center">
+          <a
+            href="https://m.facebook.com/people/Just-Dentures/61554276170301/ "
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 mb-2"
+          >
+            Facebook
+          </a>
+          <a
+            href="mailto:alougheedcdt@gmail.com"
+            className="text-blue-600 mb-2"
+          >
+            alougheedcdt@gmail.com
+          </a>
+          <a href="tel:+1234567890" className="text-blue-600 mb-4">
+            +1 234 567 890
+          </a>
+        </div>
       </div>
     </>
   )
