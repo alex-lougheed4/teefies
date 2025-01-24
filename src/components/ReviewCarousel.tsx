@@ -1,6 +1,3 @@
-// Import Swiper styles
-import 'swiper/css'
-
 import { ReviewCard } from './ReviewCard'
 
 const reviews = [

@@ -1,18 +1,22 @@
 {
-  "name": "react-ts-vite-eslint-prettier-tailwind",
+  "name": "teefies",
   "private": true,
   "version": "0.1.0",
+  "homepage": "https://alex-lougheed4.github.io/teefies",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "preview": "vite preview",
     "lint": "eslint src --max-warnings=0",
     "types": "tsc --project tsconfig.json --noEmit"
   },
   "dependencies": {
+    "gh-pages": "^6.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^7.0.2"
+    "react-router-dom": "^7.1.3"
   },
   "devDependencies": {
     "@nabla/vite-plugin-eslint": "^1.5.0",
