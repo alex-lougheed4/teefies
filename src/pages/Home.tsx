@@ -62,7 +62,7 @@ export const Home = () => {
     <>
       <div id="hero" className="h-[90vh] w-full bg-hero bg-cover bg-center ">
         <div className="flex flex-row items-center justify-between">
-          <h1 className="ml-52 text-5xl">Your smile is my priority</h1>
+          <h1 className="ml-8 text-7xl">Your smile is my priority</h1>
           <OpenTimeCard />
         </div>
         <div className="absolute bottom-0 w-full">
