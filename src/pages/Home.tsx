@@ -4,6 +4,7 @@ import ProfilePicture from '@/assets/andrew.jpg'
 import DentureReline from '@/assets/denture-reline.jpg'
 import DentureRepair from '@/assets/denture-repair.jpg'
 import NewDenture from '@/assets/new-denture.jpg'
+import Navbar from '@/components/Navbar'
 import OpenTimeCard from '@/components/OpenTimeCard'
 import { ReviewCarousel } from '@/components/ReviewCarousel'
 
@@ -60,9 +61,12 @@ export const Home = () => {
   ]
   return (
     <>
-      <div id="hero" className="h-[90vh] w-full bg-hero bg-cover bg-center ">
+      <Navbar />
+      <div id="hero" className="h-screen bg-hero bg-cover bg-center">
         <div className="flex flex-row items-center justify-between">
-          <h1 className="ml-8 text-7xl">Your smile is my priority</h1>
+          <h1 className="ml-10 text-7xl text-black">
+            Your smile is my priority
+          </h1>
           <OpenTimeCard />
         </div>
         <div className="absolute bottom-0 w-full">
@@ -92,7 +96,6 @@ export const Home = () => {
               </p>
               <h3>What can we do? </h3>
               <p className="text-md mt-2 text-black">
-                {' '}
                 A CDT is able to oversee the patient’s whole denture journey.
                 They can treatment plan (complete dentures), take the
                 impressions, do a bite registration and then manufacture the

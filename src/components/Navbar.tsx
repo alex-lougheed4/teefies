@@ -2,8 +2,8 @@ import Logo from '@/assets/grey-bg-logo.svg'
 
 const Navbar: React.FC = () => {
   return (
-    <nav className="sticky top-0 z-50 mx-auto bg-baseGrey p-4">
-      <div className="container mx-auto flex items-center justify-between text-white">
+    <nav className="sticky top-0 z-50 mx-auto bg-primaryTeal/50 p-4">
+      <div className="container mx-auto flex items-center justify-between text-black">
         <div>
           <a href="#hero">
             <img src={Logo} alt="Christmas Logo" className="h-12 w-72" />
