@@ -27,6 +27,11 @@ export const Home = () => {
       title: 'Denture Relines',
       overview: ['time', 'cost', 'benefits'],
       image: DentureReline
+    },
+    {
+      title: 'Denture Relines dupe',
+      overview: ['time', 'cost', 'benefits'],
+      image: DentureReline
     }
   ]
   return (
