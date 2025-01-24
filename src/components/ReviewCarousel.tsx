@@ -1,8 +1,6 @@
 // Import Swiper styles
 import 'swiper/css'
 
-import { Swiper, SwiperSlide } from 'swiper/react'
-
 import { ReviewCard } from './ReviewCard'
 
 const reviews = [
@@ -47,18 +45,14 @@ const reviews = [
 
 export const ReviewCarousel = () => {
   return (
-    <Swiper
-      spaceBetween={50}
-      slidesPerView={1}
-      onSlideChange={() => console.log('slide change')}
-      onSwiper={(swiper) => console.log(swiper)}
-      className="mx-auto h-48 w-64 "
-    >
-      {reviews.map((review) => (
-        <SwiperSlide className="flex-row " key={review.id}>
-          <ReviewCard key={review.id} {...review} />
-        </SwiperSlide>
-      ))}
-    </Swiper>
+    <>
+      <div className="bg-gray-100 overflow-hidden p-4 shadow-sm">
+        <div className="marquee-content flex animate-marquee items-center gap-4">
+          {reviews.map((review) => (
+            <ReviewCard key={review.id} {...review} />
+          ))}
+        </div>
+      </div>
+    </>
   )
 }

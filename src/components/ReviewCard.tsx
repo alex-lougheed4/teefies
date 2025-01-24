@@ -23,12 +23,13 @@ export const ReviewCard: React.FC<ReviewCardProps> = ({
   }
 
   return (
-    <div className="border-gray-300 h-48 w-64 overflow-hidden rounded-lg border bg-white p-4 text-center">
+    <div className="border-gray-300 h-48 w-full rounded-lg border bg-white p-5 text-center">
       <h3 className="truncate text-lg font-semibold">{name}</h3>
+      <div>{renderStars()}</div>
+
       <p className="text-gray-700 mt-2 overflow-hidden text-ellipsis">
         {review}
       </p>
-      <div>{renderStars()}</div>
     </div>
   )
 }

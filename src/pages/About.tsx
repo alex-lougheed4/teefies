@@ -12,12 +12,12 @@ export const About = () => {
           />
         </div>
         <div className="rounded-2xl bg-baseGrey p-5 text-center">
-          <h2 className="text-2xl font-semibold">John Doe, CDT</h2>
+          <h2 className="text-2xl font-semibold">Andrew Lougheed, CDT</h2>
           <p className="text-gray-700 mt-2">
-            John Doe is a highly skilled Clinical Dental Technician with over 20
-            years of experience in the field. He is dedicated to providing
-            top-quality dental care and creating a comfortable environment for
-            all patients.
+            Andrew Lougheed is a highly skilled Clinical Dental Technician with
+            over 20 years of experience in the field. He is dedicated to
+            providing top-quality dental care and creating a comfortable
+            environment for all patients.
           </p>
           <h2 className="mb-2 text-2xl font-semibold">Our Mission</h2>
           <p className="text-gray-700 mb-4">

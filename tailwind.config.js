@@ -4,11 +4,23 @@ module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      animation: {
+        marquee: 'marquee 40s linear infinite'
+      },
+      keyframes: {
+        marquee: {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(-100%)' }
+        }
+      },
       screens: {
         sm: '480px',
         md: '768px',
         lg: '976px',
         xl: '1440px'
+      },
+      backgroundImage: {
+        hero: "url('../public/hero.png')"
       },
       colors: {
         primaryTeal: '#228C8C',

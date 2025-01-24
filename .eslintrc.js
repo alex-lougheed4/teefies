@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
   env: {
     node: true,
@@ -7,6 +9,9 @@ module.exports = {
   settings: {
     react: {
       version: 'detect'
+    },
+    tailwindcss: {
+      config: path.join(__dirname, './tailwind.config.js')
     }
   },
   parser: '@typescript-eslint/parser',
