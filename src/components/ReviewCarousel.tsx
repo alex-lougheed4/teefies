@@ -36,6 +36,30 @@ const reviews = [
     name: 'Charlie Davis',
     review: 'Affordable prices and top-notch service.',
     rating: 5
+  },
+  {
+    id: 7,
+    name: 'Diana Prince',
+    review: 'Exceptional care and attention to detail.',
+    rating: 5
+  },
+  {
+    id: 8,
+    name: 'Bruce Wayne',
+    review: 'The best dental service I have ever received.',
+    rating: 5
+  },
+  {
+    id: 9,
+    name: 'Clark Kent',
+    review: 'Friendly staff and excellent service.',
+    rating: 4
+  },
+  {
+    id: 10,
+    name: 'Barry Allen',
+    review: 'Quick and efficient service.',
+    rating: 5
   }
   // Add more reviews as needed
 ]

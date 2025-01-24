@@ -5,8 +5,6 @@ import NewDenture from '@/assets/new-denture.jpg'
 import OpenTimeCard from '@/components/OpenTimeCard'
 import { ReviewCarousel } from '@/components/ReviewCarousel'
 export const Home = () => {
-  //bgi carousel behind?
-
   const data = [
     {
       title: 'New Dentures',
@@ -44,38 +42,56 @@ export const Home = () => {
         <div className="absolute bottom-0 w-full">
           <ReviewCarousel />
         </div>
-      </div>
-      <div className="mx-auto flex max-w-4xl items-center gap-5 p-4">
-        <div className="mb-8 flex flex-col items-center md:flex-row">
-          <img
-            src={ProfilePicture}
-            alt="Owner's Profile"
-            className="size-full rounded-3xl object-cover"
-          />
+        <div className="fixed bottom-4 right-4 z-50">
+          <div className="bg-orange-500 relative rounded-lg p-4 shadow-lg">
+            <button
+              className="absolute right-2 top-2 text-black"
+              onClick={() => document.getElementById('popup')?.remove()}
+            >
+              &times;
+            </button>
+            <h2 className="text-xl font-semibold text-black">
+              Clinical Dental Technician
+            </h2>
+            <p className="mt-2 text-black">
+              A Clinical Dental Technician (CDT) is a highly skilled
+              professional who specializes in the design, creation, and fitting
+              of dentures and other dental appliances. They work closely with
+              patients to ensure the best fit and comfort, providing
+              personalized care and attention to detail.
+            </p>
+          </div>
         </div>
-        <div className="rounded-2xl bg-baseGrey p-5 text-center">
-          <h2 className="text-2xl font-semibold">Andrew Lougheed, CDT</h2>
-          <p className="text-gray-700 mt-2">
+      </div>
+      <div className="mx-auto flex h-auto items-center gap-5 p-4">
+        <img
+          src={ProfilePicture}
+          alt="Owner's Profile"
+          className="size-1/3 rounded-3xl"
+        />
+        <div className="to-blue-500 rounded-2xl bg-gradient-to-r from-teal-400 p-5 text-center text-black shadow-lg">
+          <h2 className="mb-4 text-3xl font-bold">Andrew Lougheed, CDT</h2>
+          <p className="text-gray-100 mb-6 mt-2">
             Andrew is a highly skilled Clinical Dental Technician with over 20
             years of experience in the field. He is dedicated to providing
             top-quality dental care and creating a comfortable environment for
             all patients.
           </p>
-          <h2 className="mb-2 text-2xl font-semibold">Our Mission</h2>
-          <p className="text-gray-700 mb-4">
+          <h2 className="mb-4 text-3xl font-bold">Our Mission</h2>
+          <p className="text-gray-100 mb-6">
             Our mission is to deliver exceptional dental care with a focus on
             patient comfort and satisfaction. We strive to stay at the forefront
             of dental technology and techniques to ensure the best outcomes for
             our patients.
           </p>
-          <h2 className="mb-2 text-2xl font-semibold">Services We Offer</h2>
-          <p className="text-gray-700 mb-4">
+          <h2 className="mb-4 text-3xl font-bold">Services We Offer</h2>
+          <p className="text-gray-100 mb-6">
             We offer a wide range of dental services, including dentures,
             implants, and cosmetic dentistry. Our team is committed to providing
             personalized care tailored to each patient&apos;s unique needs.
           </p>
-          <h2 className="mb-2 text-2xl font-semibold">Contact Us</h2>
-          <p className="text-gray-700">
+          <h2 className="mb-4 text-3xl font-bold">Contact Us</h2>
+          <p className="text-gray-100">
             If you have any questions or would like to schedule an appointment,
             please don&apos;t hesitate to contact us. We look forward to
             welcoming you to our clinic and helping you achieve a healthy,
