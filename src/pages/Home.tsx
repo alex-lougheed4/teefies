@@ -149,12 +149,8 @@ export const Home = () => {
           <div className="flex flex-col">
             <h3 className="text-5xl">New Dentures</h3>
             <p className="text-2xl">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur
+              Bespoke dentures hand crafted with your input over the course of x
+              appointments to ensure the perfect smile
             </p>
           </div>
         </div>
@@ -181,12 +177,8 @@ export const Home = () => {
           <div className="flex flex-col">
             <h3 className="text-5xl">Implant Dentures</h3>
             <p className="text-2xl">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur
+              Handcrafted dentures designed to fit perfectly with dental
+              implants for a natural smile
             </p>
           </div>
         </div>
@@ -194,12 +186,8 @@ export const Home = () => {
           <div className="flex flex-col">
             <h3 className="text-5xl">Denture Reline</h3>
             <p className="text-2xl">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur
+              Bring new life to old dentures with our denture reline service to
+              bring comfort back to your smile
             </p>
           </div>
           <img
