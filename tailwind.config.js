@@ -29,15 +29,14 @@ module.exports = {
         white: '#FFFFFF',
         christmasRedLight: '#EA3B3B',
         christmasRedDark: '#CC3333',
-        blue: '#1fb6ff',
         purple: '#7e5bef',
         pink: '#ff49db',
         orange: '#ff7849',
         green: '#13ce66',
         yellow: '#ffc82c',
-        'gray-dark': '#273444',
+        grayDark: '#273444',
         gray: '#8492a6',
-        'gray-light': '#d3dce6'
+        grayLight: '#d3dce6'
       },
       fontFamily: {
         sans: ['Graphik', 'sans-serif'],

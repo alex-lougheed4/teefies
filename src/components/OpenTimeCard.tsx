@@ -3,8 +3,8 @@ const OpenTimeCard: React.FC = () => {
     { day: 'Monday', hours: '9:00 AM - 5:30 PM' },
     { day: 'Tuesday', hours: '9:00 AM - 5:30 PM' },
     { day: 'Wednesday', hours: '2:00 PM - 5:30 PM' },
-    { day: 'Thursday', hours: '2:00 AM - 5:30 PM' },
-    { day: 'Friday', hours: '2:00 AM - 5:30 PM' },
+    { day: 'Thursday', hours: '2:00 PM - 5:30 PM' },
+    { day: 'Friday', hours: '2:00  - 5:30 PM' },
     { day: 'Saturday', hours: '9:00 AM - 12:00 PM' },
     { day: 'Sunday', hours: 'Closed' }
   ]
