@@ -27,7 +27,7 @@ export const ReviewCard: React.FC<ReviewCardProps> = ({
       <h3 className="truncate text-lg font-semibold">{name}</h3>
       <div>{renderStars()}</div>
 
-      <p className="mt-2 overflow-hidden text-ellipsis text-baseGrey">
+      <p className="overflow-visible text-ellipsis text-sm text-baseGrey">
         {review}
       </p>
     </div>

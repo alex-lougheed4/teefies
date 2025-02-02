@@ -67,7 +67,7 @@ const reviews = [
 export const ReviewCarousel = () => {
   return (
     <>
-      <div className=" mt-96 w-72 overflow-hidden md:mt-2">
+      <div className=" mt-96 w-80 overflow-hidden md:mt-2">
         <div className="flex animate-marquee items-center gap-4">
           {reviews.map((review) => (
             <ReviewCard key={review.id} {...review} />

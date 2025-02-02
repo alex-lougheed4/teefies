@@ -41,7 +41,7 @@ export const Home = () => {
       <Navbar />
       <div id="home" className="h-screen bg-hero bg-cover bg-center ">
         <div className="flex flex-col  justify-between md:flex-row">
-          {/**flex flex-col tablet:flex-row is causing desktop to be flex-col for some reason */}
+          {/**flex flex-col md:flex-row is causing desktop to be flex-col for some reason */}
           <div className="flex flex-col items-center gap-4 md:ml-10 md:mt-16 md:items-start md:gap-12">
             <h1 className="mt-4 text-4xl text-baseGrey md:mt-0 md:text-7xl">
               Smile with confidence
@@ -133,7 +133,7 @@ export const Home = () => {
           <div className="mt-6 flex items-center justify-center rounded-xl">
             <a
               href="#contact"
-              className="rounded-full bg-secondaryTeal px-6 py-3 text-center text-5xl text-black shadow-xl hover:underline hover:shadow-primaryTeal"
+              className="rounded-3xl bg-secondaryTeal px-6 py-4 text-center text-5xl text-black shadow-xl hover:underline hover:shadow-primaryTeal"
             >
               Book a free consultation today!
             </a>
@@ -169,13 +169,15 @@ export const Home = () => {
       </div>
       <div className="my-8 w-full border-t border-black"></div>
       <div id="contact" className="mx-auto max-w-4xl justify-items-center p-4">
-        <h3 className="mb-12 text-center text-4xl">
+        <h3 className="mb-12 text-center text-2xl md:text-4xl">
           Easy Access from M5 and M42
           <br /> We&apos;re closer than you think!
         </h3>
         <div className="flex flex-col gap-20 md:flex-row">
           <div className="flex flex-col items-center text-2xl">
-            <h2 className="mb-4 text-center text-5xl font-bold">Contact Us</h2>
+            <h2 className="mb-4 text-center text-4xl font-bold md:text-5xl">
+              Contact Us
+            </h2>
             <a
               href="https://m.facebook.com/people/Just-Dentures/61554276170301/"
               target="_blank"
@@ -195,10 +197,14 @@ export const Home = () => {
             </a>
           </div>
 
-          <div className="flex flex-col  items-center">
-            <h2 className="mb-4 text-center text-5xl font-bold">Locate Us</h2>
+          <div className="flex flex-col items-center">
+            <div className="flex flex-row">
+              <MapPinIcon className="size-12" />
+              <h2 className="mb-4 mt-1 text-center text-4xl font-bold md:text-5xl">
+                Locate Us
+              </h2>
+            </div>
             <div className="flex items-center">
-              <MapPinIcon className="ml-2 size-12" />
               <address className="text-center text-2xl not-italic text-blue-900 underline">
                 <a
                   href="https://www.google.com/maps/place/112+New+Road,+Rubery,+Birmingham,+B45+9HY"
@@ -235,16 +241,16 @@ const ServiceHero = ({
 }) => {
   return (
     <div
-      className={`tablet:gap-32 flex flex-col items-center justify-center rounded-[100px] bg-[#7FA09F] p-4 text-black shadow-2xl md:flex-row ${
+      className={`flex flex-col items-center justify-center rounded-[100px] bg-[#7FA09F] p-4 text-black shadow-2xl md:flex-row md:gap-32 ${
         variation ? 'md:flex-row-reverse' : ''
       }`}
     >
       <img
         src={image}
         alt={title}
-        className="tablet:mb-4 mb-0 size-64 rounded-[100px] object-cover md:mr-6"
+        className="mb-0 size-64 rounded-[100px] object-cover md:mb-4 md:mr-6"
       />
-      <div className={`flex flex-col p-10 text-center`}>
+      <div className={`flex flex-col gap-5 p-5 text-center md:gap-0 md:p-10`}>
         <h3 className="text-5xl">{title}</h3>
         <p className="text-2xl">{overview}</p>
       </div>
