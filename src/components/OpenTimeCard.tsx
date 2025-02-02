@@ -10,9 +10,9 @@ const OpenTimeCard: React.FC = () => {
   ]
 
   return (
-    <div className="mt-4 w-96 rounded-xl p-2 text-center">
-      <h2 className="text-4xl">Opening Hours</h2>
-      <ul className="text-xl">
+    <div className="mt-4 w-96 rounded-xl bg-baseGrey p-2 text-center text-white">
+      <h2 className="mb-2 text-2xl underline md:text-4xl">Opening Hours</h2>
+      <ul className="text-sm md:text-xl">
         {openingHours.map((time, index) => (
           <li key={index}>
             <strong>{time.day}:</strong> {time.hours}

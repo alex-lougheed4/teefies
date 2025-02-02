@@ -22,7 +22,7 @@ const reviews = [
   {
     id: 4,
     name: 'Alice Johnson',
-    review: 'The staff was very accommodating and the service was excellent.',
+    review: 'The staff was very accommodating and excellent service.',
     rating: 5
   },
   {
@@ -63,12 +63,12 @@ const reviews = [
   }
   // Add more reviews as needed
 ]
-
+//stop animation on hover??
 export const ReviewCarousel = () => {
   return (
     <>
-      <div className="bg-gray-100 overflow-hidden p-4 shadow-sm">
-        <div className="marquee-content flex animate-marquee items-center gap-4">
+      <div className=" mt-96 w-72 overflow-hidden md:mt-2">
+        <div className="flex animate-marquee items-center gap-4">
           {reviews.map((review) => (
             <ReviewCard key={review.id} {...review} />
           ))}

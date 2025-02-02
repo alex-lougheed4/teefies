@@ -6,10 +6,11 @@ import DentureReline from '@/assets/denture-reline.jpg'
 import DentureRepair from '@/assets/denture-repair.jpg'
 import ImplantDentures from '@/assets/implant-dentures.jpg'
 import NewDenture from '@/assets/new-denture.jpg'
-import Navbar from '@/components/Navbar'
+import Navbar from '@/components/NewNavbar'
 import OpenTimeCard from '@/components/OpenTimeCard'
 import { ReviewCarousel } from '@/components/ReviewCarousel'
 
+//TODO - Mobile-ify
 export const Home = () => {
   const [isModalVisible, setIsModalVisible] = useState(true)
   const [isFadingOut, setIsFadingOut] = useState(false)
@@ -38,22 +39,25 @@ export const Home = () => {
   return (
     <>
       <Navbar />
-      <div id="home" className="w-full">
-        <h1 className="my-12 text-center text-5xl text-white">
-          <strong>Free</strong> No-Obligation Denture Consultations
-        </h1>
-      </div>
-      <div className="h-screen bg-hero bg-cover bg-center">
-        <div className="flex flex-row content-start items-center justify-between">
-          <h1 className="ml-10 mt-8 place-self-start text-7xl text-black">
-            Smile with confidence...
-          </h1>
-          <OpenTimeCard />
+      <div id="home" className="h-screen bg-hero bg-cover bg-center ">
+        <div className="flex flex-col  justify-between md:flex-row">
+          {/**flex flex-col tablet:flex-row is causing desktop to be flex-col for some reason */}
+          <div className="flex flex-col items-center gap-4 md:ml-10 md:mt-16 md:items-start md:gap-12">
+            <h1 className="mt-4 text-4xl text-baseGrey md:mt-0 md:text-7xl">
+              Smile with confidence
+            </h1>
+            <div className="hidden rounded-full bg-baseGrey p-8 text-white md:block">
+              <h2 className="text-xl md:text-4xl">
+                No Obligation Free Consultation
+              </h2>
+            </div>
+          </div>
+          <div className="flex flex-col items-center">
+            <OpenTimeCard />
+            <ReviewCarousel />
+          </div>
         </div>
-        <div className="absolute bottom-0 w-full">
-          <ReviewCarousel />
-        </div>
-        <div className="fixed bottom-80 left-4 z-50">
+        <div className="fixed bottom-72 left-4 z-50 hidden md:block ">
           {isModalVisible && (
             <div
               className={`relative w-1/3 rounded-lg bg-white/50 p-4 shadow-lg transition-opacity duration-300 ${
@@ -91,12 +95,12 @@ export const Home = () => {
       </div>
       <div
         id="about"
-        className="mx-auto flex h-auto items-center gap-5 bg-grayLight p-4  text-black"
+        className="mx-auto flex h-auto flex-col items-center gap-5 bg-grayLight p-4 text-black  md:flex-row"
       >
         <img
           src={ProfilePicture}
           alt="Owner's Profile"
-          className="size-1/3 rounded-3xl"
+          className="rounded-3xl md:size-1/3"
         />
         <div className="rounded-2xl p-5 text-center shadow-xl">
           <h2 className="mb-4 text-4xl font-bold">Meet Andrew...</h2>
@@ -129,7 +133,7 @@ export const Home = () => {
           <div className="mt-6 flex items-center justify-center rounded-xl">
             <a
               href="#contact"
-              className="rounded-full bg-primaryTeal px-6 py-3 text-center text-5xl text-white"
+              className="rounded-full bg-secondaryTeal px-6 py-3 text-center text-5xl text-black shadow-xl hover:underline hover:shadow-primaryTeal"
             >
               Book a free consultation today!
             </a>
@@ -140,73 +144,38 @@ export const Home = () => {
         id="services"
         className="mx-auto flex max-w-4xl flex-col items-center gap-5 bg-secondaryTeal p-4"
       >
-        <div className="flex flex-row items-center justify-center gap-32 rounded-[100px] bg-[#7FA09F] p-4 text-black shadow-2xl">
-          <img
-            src={NewDenture}
-            alt={'New Dentures'}
-            className="mb-4 w-full rounded-[100px] object-cover md:mb-0 md:mr-6 md:w-1/3"
-          />
-          <div className="flex flex-col">
-            <h3 className="text-5xl">New Dentures</h3>
-            <p className="text-2xl">
-              Bespoke dentures hand crafted with your input over the course of x
-              appointments to ensure the perfect smile
-            </p>
-          </div>
-        </div>
-        <div className="flex flex-row items-center justify-center gap-32 rounded-[100px] bg-[#7FA09F] p-4 text-right text-black shadow-2xl">
-          <div className="flex flex-col">
-            <h3 className="text-5xl">Denture Repairs</h3>
-            <p className="text-2xl">Repairs within 1 Hour</p>
-            <p className="text-2xl">
-              Fast and efficient service to keep you smiling
-            </p>
-          </div>
-          <img
-            src={DentureRepair}
-            alt={'Denture Repairs'}
-            className="mb-4 w-full rounded-[100px] object-cover md:mb-0 md:mr-6 md:w-1/3"
-          />
-        </div>
-        <div className="flex flex-row items-center justify-center gap-32 rounded-[100px] bg-[#7FA09F] p-4 text-black shadow-2xl">
-          <img
-            src={ImplantDentures}
-            alt={'Implant Dentures'}
-            className="mb-4 w-full rounded-[100px] object-cover md:mb-0 md:mr-6 md:w-1/3"
-          />
-          <div className="flex flex-col">
-            <h3 className="text-5xl">Implant Dentures</h3>
-            <p className="text-2xl">
-              Handcrafted dentures designed to fit perfectly with dental
-              implants for a natural smile
-            </p>
-          </div>
-        </div>
-        <div className="flex flex-row items-center justify-center gap-32 rounded-[100px] bg-[#7FA09F] p-4 text-right text-black shadow-2xl">
-          <div className="flex flex-col">
-            <h3 className="text-5xl">Denture Reline</h3>
-            <p className="text-2xl">
-              Bring new life to old dentures with our denture reline service to
-              bring comfort back to your smile
-            </p>
-          </div>
-          <img
-            src={DentureReline}
-            alt={'Denture Reline'}
-            className="mb-4 w-full rounded-[100px] object-cover md:mb-0 md:mr-6 md:w-1/3"
-          />
-        </div>
+        <ServiceHero
+          title="New Dentures"
+          overview="Bespoke dentures hand crafted with your input over the course of x appointments to ensure the perfect smile"
+          image={NewDenture}
+        />
+        <ServiceHero
+          title="Denture Repairs"
+          overview="Fast and efficient service to keep you smiling"
+          image={DentureRepair}
+          variation
+        />
+        <ServiceHero
+          title="Implant Dentures"
+          overview="Handcrafted dentures designed to fit perfectly with dental implants for a natural smile"
+          image={ImplantDentures}
+        />
+        <ServiceHero
+          title="Denture Reline"
+          overview="Bring new life to old dentures with our denture reline service to bring comfort back to your smile"
+          image={DentureReline}
+          variation
+        />
       </div>
-      {/* <Footer /> */}
-
+      <div className="my-8 w-full border-t border-black"></div>
       <div id="contact" className="mx-auto max-w-4xl justify-items-center p-4">
-        <h3 className="mb-12 text-center text-xl">
-          Easy Access from M5 and M42 - We&apos;re closer than you think!
+        <h3 className="mb-12 text-center text-4xl">
+          Easy Access from M5 and M42
+          <br /> We&apos;re closer than you think!
         </h3>
-        <div className="flex flex-row gap-20">
-          <div className="flex flex-col items-center">
+        <div className="flex flex-col gap-20 md:flex-row">
+          <div className="flex flex-col items-center text-2xl">
             <h2 className="mb-4 text-center text-5xl font-bold">Contact Us</h2>
-
             <a
               href="https://m.facebook.com/people/Just-Dentures/61554276170301/"
               target="_blank"
@@ -226,11 +195,11 @@ export const Home = () => {
             </a>
           </div>
 
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col  items-center">
             <h2 className="mb-4 text-center text-5xl font-bold">Locate Us</h2>
             <div className="flex items-center">
               <MapPinIcon className="ml-2 size-12" />
-              <address className="text-2xl text-blue-900 underline">
+              <address className="text-center text-2xl not-italic text-blue-900 underline">
                 <a
                   href="https://www.google.com/maps/place/112+New+Road,+Rubery,+Birmingham,+B45+9HY"
                   target="_blank"
@@ -250,5 +219,35 @@ export const Home = () => {
         </div>
       </div>
     </>
+  )
+}
+
+const ServiceHero = ({
+  title,
+  overview,
+  image,
+  variation = false
+}: {
+  title: string
+  overview: string
+  image: string
+  variation?: boolean
+}) => {
+  return (
+    <div
+      className={`tablet:gap-32 flex flex-col items-center justify-center rounded-[100px] bg-[#7FA09F] p-4 text-black shadow-2xl md:flex-row ${
+        variation ? 'md:flex-row-reverse' : ''
+      }`}
+    >
+      <img
+        src={image}
+        alt={title}
+        className="tablet:mb-4 mb-0 size-64 rounded-[100px] object-cover md:mr-6"
+      />
+      <div className={`flex flex-col p-10 text-center`}>
+        <h3 className="text-5xl">{title}</h3>
+        <p className="text-2xl">{overview}</p>
+      </div>
+    </div>
   )
 }
