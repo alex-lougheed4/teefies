@@ -1,3 +1,4 @@
+import { PhoneIcon } from '@heroicons/react/16/solid'
 import { useEffect, useState } from 'react'
 
 import AddToothDenture from '@/assets/add-tooth-denture.jpg'
@@ -55,6 +56,16 @@ export const Home = () => {
           </div>
           <div className="flex flex-col items-center">
             <OpenTimeCard />
+            <div
+              className="mt-2 block space-y-1 rounded-2xl bg-baseGrey px-4 py-1 text-white shadow-2xl shadow-black hover:shadow-secondaryTeal md:hidden"
+              onClick={() => (window.location.href = 'tel:01217143845')}
+            >
+              <p className="text-xl font-bold">Free Consultations</p>
+              <span className="inline-flex items-center">
+                0121 714 3845
+                <PhoneIcon className="ml-2 size-6 animate-bounce" />
+              </span>
+            </div>
             <ReviewCarousel />
           </div>
         </div>
