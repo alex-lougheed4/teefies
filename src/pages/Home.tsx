@@ -43,7 +43,6 @@ export const Home = () => {
       <Navbar />
       <div id="home" className="h-screen bg-hero bg-cover bg-center ">
         <div className="flex flex-col  justify-between md:flex-row">
-          {/**flex flex-col md:flex-row is causing desktop to be flex-col for some reason */}
           <div className="flex flex-col items-center gap-4 md:ml-10 md:mt-16 md:items-start md:gap-12">
             <h1 className="mt-4 text-4xl text-baseGrey md:mt-0 md:text-7xl">
               Smile with confidence
@@ -160,7 +159,7 @@ export const Home = () => {
         />
         <ServiceHero
           title="New Dentures"
-          overview="Bespoke dentures hand crafted with your input over the course of x appointments to ensure the perfect smile"
+          overview="Bespoke dentures hand crafted with your input over the course of 2 to 5 appointments to ensure the perfect smile"
           image={NewDenture}
         />
         <ServiceHero
@@ -184,7 +183,6 @@ export const Home = () => {
           title="Denture Reline"
           overview="Bring new life to old dentures with our denture reline service to bring comfort back to your smile"
           image={DentureReline}
-          variation
         />
       </div>
       <div className="mt-8 w-full border-t border-black"></div>
