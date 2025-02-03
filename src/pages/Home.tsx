@@ -253,7 +253,7 @@ export const Home = () => {
             </h2>
             <address className=" text-center text-2xl not-italic text-blue-900 underline">
               <a
-                href="https://www.google.com/maps/place/112+New+Road,+Rubery,+Birmingham,+B45+9HY"
+                href="https://maps.app.goo.gl/YV7opHqm259XZ5Ht9"
                 target="_blank"
                 rel="noopener noreferrer"
               >
