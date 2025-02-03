@@ -234,7 +234,7 @@ export const Home = () => {
             >
               alougheedcdt@gmail.com
             </a>
-            <a href="tel:+01217143845" className="text-blue-900 underline">
+            <a href="tel:01217143845" className="text-blue-900 underline">
               0121 714 3845
             </a>
             <h2 className="mb-4 pt-12 text-center text-4xl font-bold md:text-5xl">
