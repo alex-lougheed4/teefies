@@ -38,6 +38,18 @@ const reviews = [
     review:
       'Andrew was very responsive, visiting my housebound Dad at his home',
     rating: 5
+  },
+  {
+    id: 7,
+    name: 'Anonymous',
+    review: 'Great service professional and friendly. Will definitely go back',
+    rating: 5
+  },
+  {
+    id: 8,
+    name: 'Anonymous',
+    review: 'Such a lovely man and very helpful',
+    rating: 5
   }
 ]
 //stop animation on hover??
