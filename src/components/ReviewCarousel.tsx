@@ -10,7 +10,7 @@ const reviews = [
   {
     id: 2,
     name: 'Anonymous',
-    review: 'Excellent bedside manner!',
+    review: 'Excellent chair-side manner!',
     rating: 5
   },
   {

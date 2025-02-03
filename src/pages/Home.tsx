@@ -57,14 +57,14 @@ export const Home = () => {
           <div className="flex flex-col items-center">
             <OpenTimeCard />
             <div
-              className="mt-2 block space-y-1 rounded-2xl bg-baseGrey px-4 py-1 text-white shadow-2xl shadow-black hover:shadow-secondaryTeal md:hidden"
+              className="mt-2 block justify-items-center space-y-1 rounded-2xl bg-baseGrey px-4 py-1 text-white shadow-2xl shadow-black hover:shadow-secondaryTeal md:hidden"
               onClick={() => (window.location.href = 'tel:01217143845')}
             >
               <p className="text-xl font-bold">Free Consultations</p>
-              <span className="inline-flex items-center">
+              <p className="inline-flex items-center">
                 0121 714 3845
                 <PhoneIcon className="ml-2 size-6 animate-bounce" />
-              </span>
+              </p>
             </div>
             <ReviewCarousel />
           </div>
@@ -124,16 +124,17 @@ export const Home = () => {
           </p>
           <h2 className="mb-4 text-4xl font-bold">Our Mission</h2>
           <p className="mb-6 text-xl">
-            Our mission is to deliver exceptional dental care with a focus on
-            patient comfort and satisfaction. We strive to stay at the forefront
-            of dental technology and techniques to ensure the best outcomes for
-            our patients.
+            Our mission is to deliver exceptional personalised dental care with
+            a focus on patient comfort and satisfaction. Andrew strives to
+            provide the best quality for each of his patients to bring back
+            their smiles.
           </p>
           <h2 className="mb-4 text-4xl font-bold">Services We Offer</h2>
           <p className="mb-6 text-xl">
-            We offer a wide range of dental services, including dentures,
-            implants, and cosmetic dentistry. Our team is committed to providing
-            personalized care tailored to each patient&apos;s unique needs.
+            We offer a wide range of dental services, including new dentures,
+            denture repairs, relines, mouthguards and denture adjustments. Our
+            team is committed to providing personalized care tailored to each
+            patient&apos;s unique needs.
           </p>
           <h2 className="mb-4 text-4xl font-bold">Can&apos;t come in?</h2>
           <p className="mb-6 text-xl">
