@@ -1,12 +1,14 @@
-import { MapPinIcon } from '@heroicons/react/16/solid'
 import { useEffect, useState } from 'react'
 
+import AddToothDenture from '@/assets/add-tooth-denture.jpg'
 import ProfilePicture from '@/assets/andrew.jpg'
+import ClinicDay from '@/assets/clinic-day.jpg'
+import DentalChair from '@/assets/dental-chair.jpg'
 import DentureReline from '@/assets/denture-reline.jpg'
 import DentureRepair from '@/assets/denture-repair.jpg'
 import ImplantDentures from '@/assets/implant-dentures.jpg'
 import NewDenture from '@/assets/new-denture.jpg'
-import Navbar from '@/components/NewNavbar'
+import Navbar from '@/components/Navbar'
 import OpenTimeCard from '@/components/OpenTimeCard'
 import { ReviewCarousel } from '@/components/ReviewCarousel'
 
@@ -46,7 +48,7 @@ export const Home = () => {
             <h1 className="mt-4 text-4xl text-baseGrey md:mt-0 md:text-7xl">
               Smile with confidence
             </h1>
-            <div className="hidden rounded-full bg-baseGrey p-8 text-white md:block">
+            <div className="hidden animate-bounceSlow rounded-full bg-baseGrey p-8 text-white md:block">
               <h2 className="text-xl md:text-4xl">
                 No Obligation Free Consultation
               </h2>
@@ -123,6 +125,12 @@ export const Home = () => {
             implants, and cosmetic dentistry. Our team is committed to providing
             personalized care tailored to each patient&apos;s unique needs.
           </p>
+          <h2 className="mb-4 text-4xl font-bold">Can&apos;t come in?</h2>
+          <p className="mb-6 text-xl">
+            If you can&apos;t come in - Andrew may be able to come to you and
+            provide expert care from the comfort of your own home or nursing
+            home.
+          </p>
           <h2 className="mb-4 text-4xl font-bold">Contact Us</h2>
           <p className="text-xl">
             If you have any questions or would like to schedule an appointment,
@@ -130,7 +138,7 @@ export const Home = () => {
             welcoming you to our clinic and helping you achieve a healthy,
             beautiful smile.
           </p>
-          <div className="mt-6 flex items-center justify-center rounded-xl">
+          <div className="mt-16 flex animate-bounceSlow items-center justify-center rounded-xl md:mt-6">
             <a
               href="#contact"
               className="rounded-3xl bg-secondaryTeal px-6 py-4 text-center text-5xl text-black shadow-xl hover:underline hover:shadow-primaryTeal"
@@ -145,13 +153,19 @@ export const Home = () => {
         className="mx-auto flex max-w-4xl flex-col items-center gap-5 bg-secondaryTeal p-4"
       >
         <ServiceHero
+          title="Free Consultations"
+          overview="Get expert advice for existing & new dentures with ZERO obligations"
+          image={DentalChair}
+          variation
+        />
+        <ServiceHero
           title="New Dentures"
           overview="Bespoke dentures hand crafted with your input over the course of x appointments to ensure the perfect smile"
           image={NewDenture}
         />
         <ServiceHero
           title="Denture Repairs"
-          overview="Fast and efficient service to keep you smiling"
+          overview="Repairs within 1 Hour - Fast and efficient service to keep you smiling"
           image={DentureRepair}
           variation
         />
@@ -161,18 +175,48 @@ export const Home = () => {
           image={ImplantDentures}
         />
         <ServiceHero
+          title="Denture Adjustments"
+          overview="Adding Teeth to Dentures - Expect adjustments with care"
+          image={AddToothDenture}
+          variation
+        />
+        <ServiceHero
           title="Denture Reline"
           overview="Bring new life to old dentures with our denture reline service to bring comfort back to your smile"
           image={DentureReline}
           variation
         />
       </div>
-      <div className="my-8 w-full border-t border-black"></div>
+      <div className="mt-8 w-full border-t border-black"></div>
+      <div
+        id="locate-us"
+        className="mx-auto flex flex-col items-center gap-5 bg-grayLight py-10"
+      >
+        <h2 className="mb-4 text-4xl font-bold">Locate Us</h2>
+        <div className="flex flex-col items-center md:flex-row md:gap-10">
+          <img
+            src={ClinicDay}
+            alt="Our Building"
+            className="mb-4 w-64 rounded-3xl md:mb-0 md:h-2/3 md:w-1/2"
+          />
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2434.779563903318!2d-2.0209508!3d52.39254630000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487095c6dcfe48c7%3A0xa02e464085249e67!2sJust%20Dentures!5e0!3m2!1sen!2suk!4v1738600036061!5m2!1sen!2suk"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            loading="lazy"
+            className="h-96 w-full rounded-3xl md:h-[32rem] md:w-1/2"
+          ></iframe>
+        </div>
+      </div>
       <div id="contact" className="mx-auto max-w-4xl justify-items-center p-4">
-        <h3 className="mb-12 text-center text-2xl md:text-4xl">
-          Easy Access from M5 and M42
+        <h3 className="mb-12 text-center text-2xl font-semibold md:text-4xl">
+          Easy Access from the M5 and M42
           <br /> We&apos;re closer than you think!
         </h3>
+        <h4 className="mb-12 text-center text-2xl font-semibold md:text-4xl">
+          Free Customer Parking
+        </h4>
         <div className="flex flex-col gap-20 md:flex-row">
           <div className="flex flex-col items-center text-2xl">
             <h2 className="mb-4 text-center text-4xl font-bold md:text-5xl">
@@ -195,32 +239,24 @@ export const Home = () => {
             <a href="tel:+01217143845" className="text-blue-900 underline">
               0121 714 3845
             </a>
-          </div>
-
-          <div className="flex flex-col items-center">
-            <div className="flex flex-row">
-              <MapPinIcon className="size-12" />
-              <h2 className="mb-4 mt-1 text-center text-4xl font-bold md:text-5xl">
-                Locate Us
-              </h2>
-            </div>
-            <div className="flex items-center">
-              <address className="text-center text-2xl not-italic text-blue-900 underline">
-                <a
-                  href="https://www.google.com/maps/place/112+New+Road,+Rubery,+Birmingham,+B45+9HY"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  112 New Road,
-                  <br />
-                  Rubery,
-                  <br />
-                  Birmingham,
-                  <br />
-                  B45 9HY
-                </a>
-              </address>
-            </div>
+            <h2 className="mb-4 pt-12 text-center text-4xl font-bold md:text-5xl">
+              Visit Us
+            </h2>
+            <address className=" text-center text-2xl not-italic text-blue-900 underline">
+              <a
+                href="https://www.google.com/maps/place/112+New+Road,+Rubery,+Birmingham,+B45+9HY"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                112 New Road,
+                <br />
+                Rubery,
+                <br />
+                Birmingham,
+                <br />
+                B45 9HY
+              </a>
+            </address>
           </div>
         </div>
       </div>

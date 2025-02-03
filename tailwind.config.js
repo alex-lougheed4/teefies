@@ -5,12 +5,13 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        marquee: 'marquee 30s linear infinite'
+        marquee: 'marquee 30s linear infinite',
+        bounceSlow: 'bounce 3s linear infinite'
       },
       keyframes: {
         marquee: {
-          '0%': { transform: 'translateX(50%)' },
-          '100%': { transform: 'translateX(-450%)' }
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-100%)' }
         }
       },
       screens: {
