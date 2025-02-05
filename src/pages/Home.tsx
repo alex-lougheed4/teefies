@@ -117,7 +117,7 @@ export const Home = () => {
         <div className="rounded-2xl p-5 text-center shadow-xl">
           <h2 className="mb-4 text-4xl font-bold">Meet Andrew...</h2>
           <p className="mb-6 mt-2 text-xl">
-            Andrew is a highly skilled Clinical Dental Technician with over 20
+            Andrew is a highly skilled Clinical Dental Technician with over 40
             years of experience in the field. He is dedicated to providing
             top-quality dental care and creating a comfortable environment for
             all patients.
