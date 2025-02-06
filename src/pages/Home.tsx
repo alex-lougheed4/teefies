@@ -49,9 +49,11 @@ export const Home = () => {
               Smile with confidence
             </h1>
             <div className="hidden animate-bounceSlow rounded-full bg-baseGrey p-8 text-white md:block">
-              <h2 className="text-xl md:text-4xl">
-                No Obligation Free Consultation
-              </h2>
+              <a href="#contact">
+                <h2 className="text-xl md:text-4xl">
+                  No Obligation Free Consultation
+                </h2>
+              </a>
             </div>
           </div>
           <div className="flex flex-col items-center">
